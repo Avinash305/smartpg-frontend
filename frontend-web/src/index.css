@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+/* Fluid root font-size: scales with viewport, capped for readability */
+:root {
+  /* slightly smaller: min 13px, fluid around 0.9vw + 11px, max 17px */
+  font-size: clamp(13px, 0.9vw + 11px, 17px);
+}
+
+/* Small devices: keep font compact */
+@media (max-width: 640px) {
+  :root { font-size: 13px; }
+}
+@media (max-width: 360px) {
+  :root { font-size: 12px; }
+}
+
+/* Larger screens: gently bump for readability */
+@media (min-width: 1024px) {
+  :root { font-size: clamp(15px, 0.7vw + 11px, 17px); }
+}
+@media (min-width: 1280px) {
+  :root { font-size: 17px; }
+}
+@media (min-width: 1536px) {
+  :root { font-size: 18px; }
+}
